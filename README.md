@@ -1,10 +1,10 @@
-<p align="center">
-<a href="https://github.com/flant/grafana-statusmap/releases/latest"><img src="https://img.shields.io/github/tag-date/flant/grafana-statusmap.svg?logo=github&label=latest" alt="Download from GitHub"/></a>
-<a href="https://github.com/flant/grafana-statusmap/discussions"><img src="https://img.shields.io/badge/GitHub-discussions-brightgreen" alt="GH Discussions"/></a>
-<a href="https://t.me/statusmap_ru"><img src="https://img.shields.io/badge/@statusmap_ru-RU-informational.svg?logo=telegram" alt="Telegram chat RU"/></a>
-</p>
-
 # Statusmap panel for Grafana
+
+[![Download from GitHub](https://img.shields.io/github/tag-date/flant/grafana-statusmap.svg?logo=github&label=latest)](https://github.com/flant/grafana-statusmap/releases/latest)
+[![GH Discussions](https://img.shields.io/badge/GitHub-discussions-brightgreen)](https://github.com/flant/grafana-statusmap/discussions)
+[![Telegram chat RU](https://img.shields.io/badge/@statusmap_ru-RU-informational.svg?logo=telegram)](https://t.me/statusmap_ru)
+
+Panel to show discrete statuses of multiple targets over time.
 
 ![Statusmap sample panel](https://raw.githubusercontent.com/flant/grafana-statusmap/master/docs/img/flant-statusmap-panel.png)
 
@@ -28,19 +28,26 @@
   - InfluxDB
   - Mysql
 * Supported Grafana versions:
-  - 6.6+ is the most priority (6.6, 6.7, 7.0, 7.1, 7.2, 7.3, 7.4)
+  - 6.7+ are the most priority (6.7, 7.0-7.4)
   - also works in 5.4.3 and 6.0+
 
 ## Installation
 
-Plugin can be installed with GF_INSTALL_PLUGINS="flant-statusmap-panel" or you can use Git and clone this repo:
+The preferred way of installation is Grafana configuration, e.g. with environment variable GF_INSTALL_PLUGINS="flant-statusmap-panel".
+
+Also, you can download a released .zip file from [Releases](https://github.com/flant/grafana-statusmap/releases) page and uncompress it into Grafana's plugin directory (/var/lib/grafana/plugins/flant-statusmap-panel).
+
+
+```
+curl -sLO 
+unzip flant-statusmap-panel-v0.4.0.zip -d /var/lib/grafana/plugins/flant-statusmap-panel
+```
+
+For 5.x and 6.x versions of Grafana you can clone this repo:
 
 ```
 git clone git@github.com:flant/grafana-statusmap.git /var/lib/grafana/plugins/flant-statusmap-panel
 ```
-
-Alternatively, you can download [ZIP archive](https://github.com/flant/grafana-statusmap/archive/master.zip)
-of this repo and unpack it into /var/lib/grafana/plugins directory.
 
 
 ## Motivation
