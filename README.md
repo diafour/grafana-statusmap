@@ -27,9 +27,9 @@
   - Prometheus
   - InfluxDB
   - Mysql
-* Tested with Grafana:
-  - 7.0, 7.1, 7.2, 7.3
-  - 6.6, 6.7
+* Supported Grafana versions:
+  - 6.6+ is the most priority (6.6, 6.7, 7.0, 7.1, 7.2, 7.3, 7.4)
+  - also works in 5.4.3 and 6.0+
 
 ## Installation
 
