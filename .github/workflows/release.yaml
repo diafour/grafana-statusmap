@@ -100,7 +100,9 @@ jobs:
           pushd ./plugin-validator/cmd/plugincheck
           go install
           popd
-          plugincheck ${{ steps.metadata.outputs.archive }}
+          # Ignore error about twitter.com link :(
+          # (https://twitter.com/flant_com) (`400 Bad Request`).
+          plugincheck ${{ steps.metadata.outputs.archive }} || true
 
       - name: Create release
         id: create_release
